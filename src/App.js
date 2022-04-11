@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import {Container, Row, Col} from "react-bootstrap";
+import GenerateLicense from "./GenerateLicense";
+import ListLicenses from "./ListLicenses";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container>
+          <Row>
+              <Col>
+                  <GenerateLicense />
+              </Col>
+              <Col>
+                  <ListLicenses />
+              </Col>
+          </Row>
+      </Container>
     </div>
   );
 }
