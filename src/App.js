@@ -4,7 +4,8 @@ import GenerateLicense from "./GenerateLicense";
 import ListLicenses from "./ListLicenses";
 
 function App() {
-  return (
+
+    return (
     <div className="App">
       <Container>
           <Row>
