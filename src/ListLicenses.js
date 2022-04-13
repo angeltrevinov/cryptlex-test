@@ -8,7 +8,7 @@ const ListLicenses = () => {
     useEffect(() => {
         axios({
             method: 'get',
-            url: 'http://localhost:8080/cryptlex/'
+            url: '/cryptlex/'
         }).then(response => {
             console.log(response.data);
             setKeys(response.data);

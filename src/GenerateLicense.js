@@ -9,7 +9,7 @@ const GenerateLicense = () => {
     const generateLicense = () => {
         axios({
             method: 'post',
-            url: 'http://localhost:8080/cryptlex/create-license'
+            url: '/cryptlex/create-license'
         }).then(response => {
             setKey(response.data.key);
         }).catch(error => {

@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const path = require('path');
 
 // CONFIG SERVER
 const app = express();
@@ -25,6 +26,12 @@ app.use('/cryptlex', crytplexRoutes);
 // START SERVER
 app.listen(process.env.PORT || '8080', () => {
     console.log('Server is running...');
+});
+
+app.use(express.static(path.join(__dirname, '../build')));
+
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../build', 'index.html'));
 });
 
 module.exports = app;
